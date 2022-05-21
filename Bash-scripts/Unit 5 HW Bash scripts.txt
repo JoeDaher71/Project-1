@@ -1,0 +1,33 @@
+system.sh` script
+
+```bash
+    #!/bin/bash
+    #!/bin/ba
+    free -h > ~/backups/freeman/free_mem.txt
+    du -h > ~/backups/diskuse/disk_usage.txt
+    lsof > ~/backups/openlist/open_list.txt
+    df -h > ~/backups/freeman/free_disk.txt
+    ```
+
+Edits to the config files
+
+```bash
+    /var/log/auth.log {
+        rotate 7
+        daily
+        notifempty
+        compressdelaycompress
+        endscript
+    }
+    ```
+
+Command using `auditd` to set rules for `/etc/shadow`, `/etc/passwd` and `/var/log/auth.log`:
+ 
+ 
+    - Add the edits made to the `rules` file below:
+ 
+    ```
+    -w /etc/shadow -p wra -hashpass_audit shadow
+    -w /etc/passwd -p wra -userpass_audit passwd
+    -w /var/log/auth.log -p wra -authlog_audit shadow
+    ```
