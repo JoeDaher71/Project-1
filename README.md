@@ -9,11 +9,11 @@ Elk-Stack-Project_ Joseph Daher.jpg
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
 	[/Ansible/filebeat-playbook.yml](/Ansible/filebeat-playbook.yml)
-	[/ansible/metricbeat-playbook.yml]
-	/ansible/filebeat.yml
-	/ansible/metricbeat.yml
-	/ansible/pentest.yml
-	/ansible/elk.yml
+	[/Ansible/metricbeat-playbook.yml](/Ansible/metricbeat-playbook.yml)
+	[/Ansible/filebeat.yml](/Ansible/filebeat.yml)
+	[/Ansible/metricbeat.yml](/Ansible/metricbeat.yml)
+	[/Ansible/pentest.yml](/Ansible/pentest.yml)
+	[/Ansible/elk.yml](/Ansible/elk.yml)
 
 This document contains the following details:
 - Description of the Topologu
