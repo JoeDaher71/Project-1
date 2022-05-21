@@ -36,7 +36,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Metricbeat record? Metrics and Statistics
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -52,14 +51,14 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - My public IP
  
-Machines within the network can only be accessed by Jump box (20.248.194.253).
+Machines within the network can only be accessed by Jump Box (20.248.194.253).
 
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | No                  | My Personal IP       |
+| Jump Box | Yes                 | My Personal IP       |
 | Web-1    | No                  | 10.0.1.4             |
 | Web-2    | No                  | 10.0.1.4             |
 | Elk      | No                  | 10.0.1.4             |
@@ -87,7 +86,8 @@ This ELK server is configured to monitor the following machines:
 - Web 2 10.0.0.6
 
 We have installed the following Beats on these machines:
-- Microbeats
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat - collects data about the file system
